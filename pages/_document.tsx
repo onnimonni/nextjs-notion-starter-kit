@@ -9,10 +9,15 @@ export default class MyDocument extends Document {
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
         <Html lang='en'>
           <Head>
+            {/* These were generated with https://favicon.inbrowser.app/tools/favicon-generator */}
             <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
             <link rel="icon" href="/favicon.ico" sizes="48x48"/>
             <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml"/>
             <link rel="manifest" href="/site.webmanifest"/>
+
+            {/* Remember to keep the key="" attributes here if you change favicon and theme colors */}
+            <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fefffe" key="theme-color-light"/>
+            <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2d3439" key="theme-color-dark"/>
           </Head>
 
           <body>
