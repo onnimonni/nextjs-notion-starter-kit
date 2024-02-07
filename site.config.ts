@@ -64,19 +64,19 @@ export default siteConfig({
   footerLinks: [
     {
       title: 'Terms and Conditions',
-      pageId: '77c3a1abda4840658830358d0d072656'
+      url: '/terms-and-conditions'
     },
     {
       title: 'Privacy Policy',
-      pageId: '8a2fdf5b46474c098213be34b6f59a75'
+      url: '/privacy-policy'
     },
     {
       title: 'Affiliate Disclosure',
-      pageId: 'e67f9021d7ce4500a5d1fbfec3851d16'
+      url: '/affiliate-disclosure'
     },
     {
-      title: 'Security',
-      pageId: 'a1bd2c638f3146acabdfc3b2e5a11cac'
+      title: 'Security Policy',
+      url: '/security-policy'
     }
   ]
 })
