@@ -47,9 +47,7 @@ export const FooterImpl: React.FC = () => {
         <div className={styles.footerSocial}>
           <div className={styles.settings}>
             <a className={styles.link} href={config.host} rel="home" title="Logo">
-              <svg className={styles.logo}>
-                <use xlinkHref="/favicon.svg#logo"/>
-              </svg>
+              <img className={styles.logo} src="/favicon.svg"/>
               <span>{config.name}</span>
             </a>
           </div>

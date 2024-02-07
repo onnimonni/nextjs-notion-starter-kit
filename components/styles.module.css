@@ -81,7 +81,13 @@
   max-width: 50px;
   height: auto;
   margin-right: 5px;
+  border-radius: 50%;
 }
+
+.link {
+  white-space: nowrap ;
+}
+
 
 .settings,
 .social {
