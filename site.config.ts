@@ -14,7 +14,7 @@ export default siteConfig({
   author: 'Onni Hakala',
 
   // open graph metadata (optional)
-  description: 'Hacky software development and engineering practices 💻🔥',
+  description: 'Undeterministic software development and engineering practices 💻🔥',
 
   // social usernames (optional)
   //twitter: 'vanproblem',
