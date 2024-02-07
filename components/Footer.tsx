@@ -50,7 +50,7 @@ export const FooterImpl: React.FC = () => {
               <svg className={styles.logo}>
                 <use xlinkHref="/favicon.svg#logo"/>
               </svg>
-              <span>{config.author}</span>
+              <span>{config.name}</span>
             </a>
           </div>
           <div className={styles.settings}>
