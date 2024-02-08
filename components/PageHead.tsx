@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import * as config from '@/lib/config'
 import * as types from '@/lib/types'
-import { getSocialImageUrl } from '@/lib/get-social-image-url'
+// import { getSocialImageUrl } from '@/lib/get-social-image-url'
 
 export const PageHead: React.FC<
   types.PageProps & {
@@ -18,7 +18,9 @@ export const PageHead: React.FC<
   title = title ?? site?.name
   description = description ?? site?.description
 
-  const socialImageUrl = getSocialImageUrl(pageId) || image
+  // TODO: This is disabled for now and static image is used instead. The default image looks pretty ugly
+  // const socialImageUrl = getSocialImageUrl(pageId) || image
+  const socialImageUrl = `${config.host}/social-sharing-image.png`
 
   return (
     <Head>
