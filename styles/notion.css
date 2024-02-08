@@ -137,6 +137,14 @@
   margin: 0.75em 0;
 }
 
+/* Seems like a bug in notion-react-x and numbered list inside numbered list shouldn't show numbers */
+ol.notion-list.notion-list-numbered > ol.notion-list.notion-list-numbered {
+  list-style-type: lower-alpha;
+}
+ol.notion-list.notion-list-numbered > ol.notion-list.notion-list-numbered > ol.notion-list.notion-list-numbered {
+  list-style-type: lower-roman;
+}
+
 .notion-hr {
   margin: 2em 0;
 }
