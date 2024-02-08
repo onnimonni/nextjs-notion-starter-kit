@@ -14,7 +14,7 @@ export default siteConfig({
   author: 'Onni Hakala',
 
   // open graph metadata (optional)
-  description: "Undeterministic blog on product development and software engineering. It's flaky so you never know what to expect 💻🔥",
+  description: "Undeterministic blog on product development and software engineering 💻🔥",
 
   // social usernames (optional)
   twitter: 'flakybuild',
