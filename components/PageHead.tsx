@@ -12,6 +12,8 @@ export const PageHead: React.FC<
     image?: string
     url?: string
   }
+  /* TODO: enable the proper social sharing images soon */
+  /* eslint-disable @typescript-eslint/no-unused-vars */
 > = ({ site, title, description, pageId, image, url }) => {
   const rssFeedUrl = `${config.host}/feed`
 
