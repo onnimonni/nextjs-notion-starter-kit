@@ -116,7 +116,8 @@ export const FooterImpl: React.FC = () => {
               {config.linkedin && (
                 <a
                   className={styles.linkedin}
-                  href={`https://www.linkedin.com/in/${config.linkedin}`}
+                  // Support both user and company pages
+                  href={config.getLinkedInURL(config.linkedin)}
                   title={`LinkedIn ${config.author}`}
                   target='_blank'
                   rel='noopener noreferrer'

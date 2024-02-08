@@ -14,12 +14,12 @@ export default siteConfig({
   author: 'Onni Hakala',
 
   // open graph metadata (optional)
-  description: 'Undeterministic software development and engineering practices 💻🔥',
+  description: "Undeterministic blog on product development and software engineering. It's flaky so you never know what to expect 💻🔥",
 
   // social usernames (optional)
-  //twitter: 'vanproblem',
+  twitter: 'flakybuild',
   github: 'flakybuild',
-  //linkedin: 'fisch2',
+  linkedin: 'company/flaky-build',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   instagram: 'flaky.build', // optional instagram username

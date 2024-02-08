@@ -75,6 +75,14 @@ export const getMastodonHandle = (): string | null => {
   return `${url.pathname.slice(1)}@${url.hostname}`
 }
 
+export const getLinkedInURL = (userOrCompany: string): string => {
+  if (userOrCompany.startsWith('company/')) {
+    return `https://www.linkedin.com/${userOrCompany}`
+  } else {
+    return `https://www.linkedin.com/in/${userOrCompany}`
+  }
+}
+
 // default notion values for site-wide consistency (optional; may be overridden on a per-page basis)
 export const defaultPageIcon: string | null = getSiteConfig(
   'defaultPageIcon',
