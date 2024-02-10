@@ -20,6 +20,7 @@ export const PageHead: React.FC<
   title = title ?? site?.name
   description = description ?? site?.description
 
+  console.log('PageHead', { title, description, pageId, image, url })
   // TODO: This is disabled for now and static image is used instead. The default image looks pretty ugly
   // const socialImageUrl = getSocialImageUrl(pageId) || image
   const socialImageUrl = `${config.host}/social-sharing-image.png`

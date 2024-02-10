@@ -51,7 +51,7 @@ export const FooterImpl: React.FC = () => {
               <span>{config.name}</span>
             </a>
           </div>
-          <div className={styles.settings}>
+          <div className={cs(styles.settings, styles.toggleDarkModeContainer)}>
             {hasMounted && (
               <a
                 className={styles.toggleDarkMode}
