@@ -40,6 +40,8 @@ export const PageHead: React.FC<
         content='black'
       />
 
+      <meta name='impact-site-verification' content='76881433-f9aa-4d4b-a9c8-9a3d65d3bef9' />
+
       <meta name='robots' content='index,follow' />
       <meta property='og:type' content='website' />
 
