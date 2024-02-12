@@ -141,7 +141,7 @@ export const FooterImpl: React.FC = () => {
               {config.instagram && (
                 <a
                   className={styles.instagram}
-                  href={`https://www.reddit.com/u/${config.instagram}`}
+                  href={`https://instagram.com/u/${config.instagram}`}
                   title={`Instagram ${config.author}`}
                   target='_blank'
                   rel='noopener noreferrer'
