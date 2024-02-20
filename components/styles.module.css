@@ -88,14 +88,6 @@
   white-space: nowrap;
 }
 
-/* Position the dark mode / light mode button in the middle of the screen no matter what */
-.footer .toggleDarkModeContainer {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1; /* Ensure the centered item overlays the others */
-}
-
 .settings,
 .social {
   user-select: none;
@@ -168,6 +160,16 @@
   width: 100%;
   margin-top: 2em;
   border-top: 1px solid var(--fg-color-0);
+}
+
+@media only screen and (min-width: 661px) {
+  /* Position the dark mode / light mode button in the middle of the screen no matter what */
+  .footer .toggleDarkModeContainer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Ensure the centered item overlays the others */
+  }
 }
 
 @media only screen and (max-width: 660px) {
