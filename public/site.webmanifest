@@ -1,6 +1,6 @@
 {
-  "name": "Flaky Build",
-  "short_name": "FlakyBuild",
+  "name": "Keksi Labs",
+  "short_name": "KeksiLabs",
   "icons": [
     {
       "src": "/pwa-192x192.png",
@@ -29,7 +29,7 @@
   ],
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1ac5eb",
-  "theme_color": "#1ac5eb",
-  "description": "Undeterministic software development and engineering practices 💻🔥"
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "description": "Konsultoiva erityisopettaja"
 }
