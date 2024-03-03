@@ -1,0 +1,13 @@
+# Latest LTS as of Jan 2024
+nodejs 18.19.0
+
+# There was a moment when Notion search API was broken
+# It was fixed directly in react-notion-x dependency
+# When trying to replace the dependency I tried to run
+# $ brew install vips
+# $ yarn add https://github.com/NotionX/react-notion-x#v6.16.2
+# There's weird errors if one is building react-notion-x directly from github
+# 'ValueError: invalid mode: 'rU' while trying to load binding.gyp'
+# These should be fixed by downgrading python to 3.10
+# Source: https://stackoverflow.com/a/74732671
+python 3.10.13
