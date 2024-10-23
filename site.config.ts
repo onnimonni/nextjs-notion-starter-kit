@@ -52,6 +52,20 @@ export default siteConfig({
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages. To use `navigationLinks`, set `navigationStyle` to `custom`.
-  // navigationStyle: 'custom',
-  // navigationStyle: 'custom',
+  navigationStyle: 'custom',
+  navigationLinks: [
+    {
+      title: 'Hinnat',
+      pageId: '2b2738cdeb98488b99d8c50aed1eab40'
+    },
+    {
+      title: 'Varaa aika',
+      // Vaihda tähä oma linkki
+      url: 'https://cal.com/meri.jyrava'
+    },
+    {
+      title: 'Yhteystiedot',
+      pageId: 'aa0d2bdcfe714eb49c3c633d170edd24'
+    }
+  ]
 })

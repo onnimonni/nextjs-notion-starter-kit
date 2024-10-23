@@ -1,34 +1,10 @@
-![Social Image](./public/social-banner-image.png)
+ ![Social Image](./public/social-banner-image.png)
 
-# Next.js Notion Starter Kit
+# keksi.io website 
 
-> The perfect starter kit for building websites with Next.js and Notion.
-
-## Intro
-
-This repo is what I use to power my personal blog and portfolio site [transitivebullsh.it](https://transitivebullsh.it).
+This repo is based on the notion blog from [transitivebullsh.it](https://transitivebullsh.it).
 
 It uses Notion as a CMS, [react-notion-x](https://github.com/NotionX/react-notion-x), [Next.js](https://nextjs.org/), and [Vercel](https://vercel.com).
-
-## Features
-
-- Setup only takes a few minutes ([single config file](./site.config.ts)) 💪
-- Robust support for Notion content via [react-notion-x](https://github.com/NotionX/react-notion-x)
-- Built using Next.js, TS, and React
-- Excellent page speeds
-- Smooth image previews
-- Automatic social images
-- Automatic pretty URLs
-- Automatic table of contents
-- Full support for dark mode
-- Quick search via CMD+K / CMD+P
-- Responsive for different devices
-- Optimized for Next.js and Vercel
-
-## Demos
-
-- [Default demo](https://nextjs-notion-starter-kit.transitivebullsh.it) - Deployed from the `main` branch
-- [My site](https://transitivebullsh.it) - Deployed from the `transitive-bullshit` branch
 
 ## Setup
 
@@ -37,11 +13,13 @@ It uses Notion as a CMS, [react-notion-x](https://github.com/NotionX/react-notio
 This project requires a recent version of Node.js (we recommend >= 16).
 
 1. Fork / clone this repo
-2. Change a few values in [site.config.ts](./site.config.ts)
-3. `npm install`
-4. `npm run dev` to test locally
-5. `npm run deploy` to deploy to vercel 💪
-6. ❗Disable **Deployment Protection** setting in Vercel Web Dashboard ❗ ([See more below](#vercel-configuration))
+2. Ensure you have homebrew installed
+3. `brew install mise`
+4. `mise install` this installs nodejs for you
+5. `npm install`
+6. `npm run dev` to run site locally
+7. `npm run deploy` to deploy to vercel 💪
+8. ❗Disable **Deployment Protection** setting in Vercel Web Dashboard ❗ ([See more below](#vercel-configuration))
 
 I tried to make configuration as easy as possible — All you really need to do to get started is edit `rootNotionPageId`.
 
