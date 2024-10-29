@@ -7,7 +7,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
-        <Html lang='en'>
+        <Html lang='fi'>
           <Head>
             {/* These were generated with https://favicon.inbrowser.app/tools/favicon-generator */}
             <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>

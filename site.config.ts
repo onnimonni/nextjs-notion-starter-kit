@@ -14,7 +14,7 @@ export default siteConfig({
   author: 'Meri Jyrävä',
 
   // open graph metadata (optional)
-  description: "Konsultoiva erityisopetuksen asiantuntija",
+  description: "Tukiopetusta etänä erityisopetuksen asiantuntijalta",
 
   // social usernames (optional)
   //twitter: 'flakybuild',
@@ -22,7 +22,7 @@ export default siteConfig({
   linkedin: 'company/keksilabs',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
-  // instagram: 'flaky.build', // optional instagram username
+  instagram: 'keksi_labs', // optional instagram username
   // youtube: 'TravelingVanProblem', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
   // reddit: 'TravelingVanProblem', // optional reddit username
 
