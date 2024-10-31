@@ -10,7 +10,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -20,7 +20,12 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/lib/*": ["lib/*"],
-      "@/styles/*": ["styles/*"]
+      "@/styles/*": ["styles/*"],
+      "notion-utils": ["node_modules/@onnimonni/notion-utils"],
+      "notion-types": ["node_modules/@onnimonni/notion-types"],
+      "notion-client": ["node_modules/@onnimonni/notion-client"],
+      "notion-compat": ["node_modules/@onnimonni/notion-compat"],
+      "react-notion-x": ["node_modules/@onnimonni/react-notion-x"]
     }
   },
   "exclude": ["node_modules"],

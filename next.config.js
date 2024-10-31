@@ -18,5 +18,17 @@ module.exports = withBundleAnalyzer({
     formats: ['image/avif', 'image/webp'],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
-  }
+  },
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'notion-utils': '@onnimonni/notion-utils',
+      'notion-types': '@onnimonni/notion-types',
+      'notion-client': '@onnimonni/notion-client',
+      'notion-compat': '@onnimonni/notion-compat',
+      'react-notion-x': '@onnimonni/react-notion-x'
+    };
+
+    return config;
+  },
 })
