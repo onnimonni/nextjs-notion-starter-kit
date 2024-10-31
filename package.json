@@ -36,7 +36,7 @@
     "date-fns": "^3.6.0",
     "expiry-map": "^2.0.0",
     "fathom-client": "^3.7.2",
-    "got": "^14.4.2",
+    "ky": "^1.7.2",
     "isomorphic-unfetch": "^4.0.2",
     "lqip-modern": "^2.1.0",
     "next": "14",
