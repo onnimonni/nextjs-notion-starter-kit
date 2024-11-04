@@ -28,9 +28,15 @@ import {
   posthogId
 } from '@/lib/config'
 
+
+
 if (!isServer) {
   bootstrap()
 }
+
+// Override font for the site
+import { Mulish } from 'next/font/google'
+const font = Mulish({ subsets: ['latin'] })
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -61,5 +67,9 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, [router.events])
 
-  return <Component {...pageProps} />
+  return (
+    <main className={font.className} style={{ '--notion-font': font.style.fontFamily } as React.CSSProperties}>
+      <Component {...pageProps} />
+    </main>
+  )
 }
