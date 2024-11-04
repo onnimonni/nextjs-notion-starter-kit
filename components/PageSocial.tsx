@@ -1,13 +1,13 @@
 import type * as React from 'react'
 import cs from 'classnames'
+import { FaGithub, FaInstagram, FaLinkedin, FaMastodon, FaReddit, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaEnvelopeOpenText,FaGitlab, FaXTwitter } from 'react-icons/fa6'
+import { IoIosBug } from 'react-icons/io'
 
 import * as config from '@/lib/config'
+import { getLinkedInURLFromInput } from '@/lib/social-helpers'
 
 import styles from './PageSocial.module.css'
-import { FaGithub, FaInstagram, FaLinkedin, FaMastodon, FaReddit, FaTwitter, FaYoutube } from 'react-icons/fa'
-import { FaXTwitter, FaGitlab, FaEnvelopeOpenText } from 'react-icons/fa6'
-import { IoIosBug } from 'react-icons/io'
-import { getLinkedInURLFromInput } from '@/lib/social-helpers'
 
 interface SocialLink {
   name: string
