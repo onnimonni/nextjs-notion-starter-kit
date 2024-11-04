@@ -75,7 +75,7 @@ export function FooterImpl() {
                   <components.Link
                     href={link.url}
                     key={index}
-                    target=''
+                    target={link.url.startsWith('/') && ''}
                     className={cs(styles.navLink, 'breadcrumb', 'button')}
                   >
                     {link.title}
