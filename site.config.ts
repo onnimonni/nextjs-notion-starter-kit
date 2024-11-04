@@ -67,5 +67,16 @@ export default siteConfig({
       title: 'Yhteystiedot',
       pageId: 'aa0d2bdcfe714eb49c3c633d170edd24'
     }
+  ],
+
+  footerLinks: [
+    {
+      title: 'Palvelun ehdot',
+      url: '#'
+    },
+    {
+      title: 'Tietosuojaseloste',
+      pageId: '1348512e8688804d9542e585c113dc1c'
+    }
   ]
 })
