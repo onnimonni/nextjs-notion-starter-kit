@@ -7,6 +7,7 @@ import styles from './PageSocial.module.css'
 import { FaGithub, FaInstagram, FaLinkedin, FaMastodon, FaReddit, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { FaXTwitter, FaGitlab, FaEnvelopeOpenText } from 'react-icons/fa6'
 import { IoIosBug } from 'react-icons/io'
+import { getLinkedInURLFromInput } from '@/lib/social-helpers'
 
 interface SocialLink {
   name: string
@@ -65,7 +66,7 @@ export const socialLinks: SocialLink[] = [
 
   config.linkedin && {
     name: 'linkedin',
-    href: `https://www.linkedin.com/in/${config.linkedin}`,
+    href: getLinkedInURLFromInput(config.linkedin),
     title: `LinkedIn ${config.author}`,
     color: "#ffffff",
     background: "#0077b5",
