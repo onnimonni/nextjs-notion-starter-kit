@@ -39,22 +39,20 @@ export function FooterImpl() {
 
         <div className={cs(styles.settings,styles.toggleDarkModeContainer)}>
           {hasMounted && (
-            <a
-              className={styles.toggleDarkMode}
-              href='#'
-              role='button'
-              onClick={onToggleDarkMode}
-              title='Toggle dark mode'
-            >
-              {isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
-            </a>
+            <button
+            type="button"
+            className={styles.toggleDarkMode}
+            onClick={onToggleDarkMode}
+            title='Toggle dark mode'
+          >
+            {isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
+          </button>
           )}
         </div>
         <div className={styles.social}>
           <PageSocialButtons iconSize={32} />
         </div>
       </div>
-
       <div className="SiteInfo">
         <div className={styles.siteInfoLinks}>
             {footerLinks
