@@ -18,11 +18,19 @@ export default siteConfig({
 
   // social usernames (optional)
   twitter: 'transitive_bs',
+  // twitterX: 'transitive_bs', // If you want to use X.com logo instead
+  // mastodon: '#' // optional mastodon profile URL, provides link verification
+
   github: 'transitive-bullshit',
-  linkedin: 'fisch2',
+  // gitlab: 'transitive-bullshit', // optional gitlab account
+
+  linkedin: 'fisch2', // For company pages use: 'company/microsoft' syntax
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
+  // instagram: '#', // optional instagram account
+  // reddit: '#', // optional reddit account
+  // bugtracker: '#', // optional bugtracker URL
 
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults
@@ -50,7 +58,7 @@ export default siteConfig({
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages. To use `navigationLinks`, set `navigationStyle` to `custom`.
-  navigationStyle: 'default'
+  navigationStyle: 'default',
   // navigationStyle: 'custom',
   // navigationLinks: [
   //   {
@@ -62,4 +70,23 @@ export default siteConfig({
   //     pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
   //   }
   // ]
+
+  footerLinks: [
+    {
+      title: 'Terms and Conditions',
+      url: '/terms-and-conditions'
+    },
+    {
+      title: 'Privacy Policy',
+      url: '/privacy-policy'
+    },
+    {
+      title: 'Affiliate Disclosure',
+      url: '/affiliate-disclosure'
+    },
+    {
+      title: 'Security Policy',
+      url: '/security-policy'
+    }
+  ]
 })

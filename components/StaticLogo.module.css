@@ -1,0 +1,28 @@
+.logo {
+  height: 75%;
+  margin-right: 5px;
+  border-radius: 50%;
+  display: flex;
+}
+
+.logo img {
+  max-height: 50px;
+  max-width: 50px;
+  object-fit: contain;
+}
+.logo > * {
+  display: inline-flex;
+  font-weight: 500;
+  padding-right: 0.1em;
+  font-size: 2em;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 660px) {
+  .logo {
+    justify-content: center;
+  }
+}

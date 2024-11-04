@@ -1,10 +1,10 @@
+import type {
+  ExtendedRecordMap,
+  PreviewImage,
+  PreviewImageMap
+} from 'notion-types'
 import ky from 'ky'
 import lqip from 'lqip-modern'
-import {
-  type ExtendedRecordMap,
-  type PreviewImage,
-  type PreviewImageMap
-} from 'notion-types'
 import { getPageImageUrls, normalizeUrl } from 'notion-utils'
 import pMap from 'p-map'
 import pMemoize from 'p-memoize'

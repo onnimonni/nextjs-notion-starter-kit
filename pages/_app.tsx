@@ -15,6 +15,8 @@ import 'styles/prism-theme.css'
 
 import type { AppProps } from 'next/app'
 import * as Fathom from 'fathom-client'
+// Override font for the site
+import { Mulish } from 'next/font/google'
 import { useRouter } from 'next/router'
 import posthog from 'posthog-js'
 import * as React from 'react'
@@ -28,9 +30,12 @@ import {
   posthogId
 } from '@/lib/config'
 
+
+
 if (!isServer) {
   bootstrap()
 }
+const font = Mulish({ subsets: ['latin'] })
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -61,5 +66,9 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, [router.events])
 
-  return <Component {...pageProps} />
+  return (
+    <main className={font.className} style={{ '--notion-font': font.style.fontFamily } as React.CSSProperties}>
+      <Component {...pageProps} />
+    </main>
+  )
 }

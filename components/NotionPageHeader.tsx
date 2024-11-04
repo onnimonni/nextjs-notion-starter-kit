@@ -1,13 +1,13 @@
 import type * as types from 'notion-types'
-import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
-import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
 import cs from 'classnames'
 import * as React from 'react'
-import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
+import { IoMoonSharp, IoSunnyOutline } from 'react-icons/io5'
+import { Header, Search, useNotionContext } from 'react-notion-x'
 
 import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
+import { StaticLogo } from './StaticLogo'
 import styles from './styles.module.css'
 
 function ToggleThemeButton() {
@@ -23,12 +23,13 @@ function ToggleThemeButton() {
   }, [toggleDarkMode])
 
   return (
-    <div
-      className={cs('breadcrumb', 'button', !hasMounted && styles.hidden)}
+    <button
+      type="button"
+      className={cs('breadcrumb', 'button', styles.toggleDarkMode, !hasMounted && styles.hidden)}
       onClick={onToggleTheme}
     >
       {hasMounted && isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
-    </div>
+    </button>
   )
 }
 
@@ -46,11 +47,12 @@ export function NotionPageHeader({
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
-        <Breadcrumbs block={block} rootOnly={true} />
-
+        <div className="notion-nav-header-rhs breadcrumbs">
+          <StaticLogo />
+        </div>
         <div className='notion-nav-header-rhs breadcrumbs'>
           {navigationLinks
-            ?.map((link, index) => {
+            ?.map((link) => {
               if (!link.pageId && !link.url) {
                 return null
               }
@@ -59,23 +61,22 @@ export function NotionPageHeader({
                 return (
                   <components.PageLink
                     href={mapPageUrl(link.pageId)}
-                    key={index}
+                    key={`nav-${link.pageId}-${link.title}`}
                     className={cs(styles.navLink, 'breadcrumb', 'button')}
                   >
                     {link.title}
                   </components.PageLink>
                 )
-              } else {
-                return (
-                  <components.Link
-                    href={link.url}
-                    key={index}
-                    className={cs(styles.navLink, 'breadcrumb', 'button')}
-                  >
-                    {link.title}
-                  </components.Link>
-                )
               }
+              return (
+                <components.Link
+                  href={link.url}
+                  key={`nav-${link.url}-${link.title}`}
+                  className={cs(styles.navLink, 'breadcrumb', 'button')}
+                >
+                  {link.title}
+                </components.Link>
+              )
             })
             .filter(Boolean)}
 
