@@ -2,27 +2,27 @@ import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: '913af13d078d4ccbbd3fe16afc0ea17f',
+  rootNotionPageId: '0f7d9b7aec8b4d16a064886b245badef',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'Flaky Build',
-  domain: 'flaky.build',
-  author: 'Onni Hakala',
+  name: 'Keksi Labs',
+  domain: 'keksi.io',
+  author: 'Meri Jyrävä',
 
   // open graph metadata (optional)
-  description: "Undeterministic blog on product development and software engineering 💻🔥",
+  description: "Tukiopetusta etänä erityisopetuksen asiantuntijalta",
 
   // social usernames (optional)
-  twitter: 'flakybuild',
-  github: 'flakybuild',
-  linkedin: 'company/flaky-build',
+  //twitter: 'flakybuild',
+  //github: 'flakybuild',
+  linkedin: 'company/keksilabs',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
-  instagram: 'flaky.build', // optional instagram username
+  instagram: 'keksi_labs', // optional instagram username
   // youtube: 'TravelingVanProblem', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
   // reddit: 'TravelingVanProblem', // optional reddit username
 
@@ -53,30 +53,19 @@ export default siteConfig({
   // whether to use the default notion navigation style or a custom one with links to
   // important pages. To use `navigationLinks`, set `navigationStyle` to `custom`.
   navigationStyle: 'custom',
-  // navigationStyle: 'custom',
   navigationLinks: [
     {
-      title: 'About',
-      url: '/about-us'
-    }
-  ],
-
-  footerLinks: [
-    {
-      title: 'Terms and Conditions',
-      url: '/terms-and-conditions'
+      title: 'Hinnat',
+      pageId: '2b2738cdeb98488b99d8c50aed1eab40'
     },
     {
-      title: 'Privacy Policy',
-      url: '/privacy-policy'
+      title: 'Varaa aika',
+      // Vaihda tähä oma linkki
+      url: 'https://cal.com/meri.jyrava'
     },
     {
-      title: 'Affiliate Disclosure',
-      url: '/affiliate-disclosure'
-    },
-    {
-      title: 'Security Policy',
-      url: '/security-policy'
+      title: 'Yhteystiedot',
+      pageId: 'aa0d2bdcfe714eb49c3c633d170edd24'
     }
   ]
 })

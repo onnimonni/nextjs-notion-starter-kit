@@ -16,7 +16,7 @@ import 'styles/prism-theme.css'
 import type { AppProps } from 'next/app'
 import * as Fathom from 'fathom-client'
 // Override font for the site
-import { Mulish, Leckerli_One } from 'next/font/google'
+import { Mulish} from 'next/font/google'
 import { useRouter } from 'next/router'
 import posthog from 'posthog-js'
 import * as React from 'react'
@@ -37,7 +37,7 @@ if (!isServer) {
   bootstrap()
 }
 const font = Mulish({ subsets: ['latin'] })
-const logo_font = Leckerli_One({ weight: '400', subsets: ['latin'] })
+const logo_font = Mulish({ weight: '400', subsets: ['latin'] })
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
