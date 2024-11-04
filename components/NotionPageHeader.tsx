@@ -9,6 +9,7 @@ import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
 import styles from './styles.module.css'
+import { StaticLogo } from './StaticLogo'
 
 function ToggleThemeButton() {
   const [hasMounted, setHasMounted] = React.useState(false)
@@ -46,8 +47,9 @@ export function NotionPageHeader({
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
-        <Breadcrumbs block={block} rootOnly={true} />
-
+        <div className="notion-nav-header-rhs breadcrumbs">
+          <StaticLogo />
+        </div>
         <div className='notion-nav-header-rhs breadcrumbs'>
           {navigationLinks
             ?.map((link, index) => {
