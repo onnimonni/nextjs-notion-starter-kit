@@ -2,13 +2,13 @@ import type * as types from 'notion-types'
 import cs from 'classnames'
 import * as React from 'react'
 import { IoMoonSharp, IoSunnyOutline } from 'react-icons/io5'
-import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
+import { Header, Search, useNotionContext } from 'react-notion-x'
 
 import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
-import styles from './styles.module.css'
 import { StaticLogo } from './StaticLogo'
+import styles from './styles.module.css'
 
 function ToggleThemeButton() {
   const [hasMounted, setHasMounted] = React.useState(false)
@@ -52,7 +52,7 @@ export function NotionPageHeader({
         </div>
         <div className='notion-nav-header-rhs breadcrumbs'>
           {navigationLinks
-            ?.map((link, index) => {
+            ?.map((link) => {
               if (!link.pageId && !link.url) {
                 return null
               }

@@ -1,5 +1,6 @@
-import * as config from '@/lib/config'
 import cs from 'classnames'
+
+import * as config from '@/lib/config'
 
 import styles from './StaticLogo.module.css'
 

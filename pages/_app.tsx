@@ -15,6 +15,8 @@ import 'styles/prism-theme.css'
 
 import type { AppProps } from 'next/app'
 import * as Fathom from 'fathom-client'
+// Override font for the site
+import { Mulish } from 'next/font/google'
 import { useRouter } from 'next/router'
 import posthog from 'posthog-js'
 import * as React from 'react'
@@ -33,9 +35,6 @@ import {
 if (!isServer) {
   bootstrap()
 }
-
-// Override font for the site
-import { Mulish } from 'next/font/google'
 const font = Mulish({ subsets: ['latin'] })
 
 export default function App({ Component, pageProps }: AppProps) {

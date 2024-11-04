@@ -1,15 +1,14 @@
-import * as React from 'react'
 import cs from 'classnames'
+import * as React from 'react'
 import { IoMoonSharp, IoSunnyOutline } from 'react-icons/io5'
-
-import * as config from '@/lib/config'
-import { useDarkMode } from '@/lib/use-dark-mode'
-import { PageSocialButtons } from './PageSocial'
-
-import styles from './styles.module.css'
-import { StaticLogo } from './StaticLogo'
-import { footerLinks } from '@/lib/config'
 import { useNotionContext } from 'react-notion-x'
+
+import { footerLinks } from '@/lib/config'
+import { useDarkMode } from '@/lib/use-dark-mode'
+
+import { PageSocialButtons } from './PageSocial'
+import { StaticLogo } from './StaticLogo'
+import styles from './styles.module.css'
 
 // TODO: merge the data and icons from PageSocial with the social links in Footer
 
