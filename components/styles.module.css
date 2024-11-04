@@ -101,7 +101,7 @@
   transition: color 50ms ease-out;
 }
 
-.settings button {
+button.toggleDarkMode {
   /* Reset default button styles */
   background: none;
   border: none;
