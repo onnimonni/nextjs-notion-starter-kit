@@ -14,13 +14,13 @@ import 'styles/notion.css'
 import 'styles/prism-theme.css'
 
 import type { AppProps } from 'next/app'
+import cs from 'classnames'
 import * as Fathom from 'fathom-client'
 // Override font for the site
-import { Mulish} from 'next/font/google'
+import { Mulish } from 'next/font/google'
 import { useRouter } from 'next/router'
 import posthog from 'posthog-js'
 import * as React from 'react'
-import cs from 'classnames'
 
 import { bootstrap } from '@/lib/bootstrap-client'
 import {
