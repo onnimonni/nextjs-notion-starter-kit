@@ -53,6 +53,10 @@ export const domain: string = getSiteConfig('domain')
 export const description: string = getSiteConfig('description', 'Notion Blog')
 export const language: string = getSiteConfig('language', 'en')
 
+// Google and Advertising
+export const google_tag_manager_id: string | null = getSiteConfig('google_tag_manager_id', null)
+export const google_adwords_id: string | null = getSiteConfig('google_adwords_id', null)
+
 // social accounts
 export const twitter: string | null = getSiteConfig('twitter', null)
 export const twitterX: string | null = getSiteConfig('twitterX', null)

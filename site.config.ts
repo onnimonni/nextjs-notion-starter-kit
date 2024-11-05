@@ -14,6 +14,10 @@ export default siteConfig({
   author: 'Meri Jyrävä',
   language: 'fi', // override the default english language
 
+  // Analytics and advertising
+  google_tag_manager_id: 'GTM-MNWBDNWQ',
+  google_adwords_id: 'AW-16758350058',
+
   // open graph metadata (optional)
   description: "Tukiopetusta etänä erityisopetuksen asiantuntijalta",
 

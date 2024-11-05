@@ -24,6 +24,7 @@ import * as React from 'react'
 
 import { bootstrap } from '@/lib/bootstrap-client'
 import {
+  google_tag_manager_id,
   fathomConfig,
   fathomId,
   isServer,
@@ -31,7 +32,7 @@ import {
   posthogId
 } from '@/lib/config'
 
-
+import { GoogleTagManager } from '@next/third-parties/google'
 
 if (!isServer) {
   bootstrap()
@@ -71,6 +72,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={cs(font.className, logo_font.className)} style={{ '--notion-font': font.style.fontFamily, '--logo-font': logo_font.style.fontFamily } as React.CSSProperties}>
       <Component {...pageProps} />
+      <GoogleTagManager gtmId={google_tag_manager_id} />
     </main>
   )
 }

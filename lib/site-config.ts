@@ -10,6 +10,9 @@ export interface SiteConfig {
   description?: string
   language?: string
 
+  google_tag_manager_id?: string
+  google_adwords_id?: string
+
   twitter?: string
   twitterX?: string
   github?: string
