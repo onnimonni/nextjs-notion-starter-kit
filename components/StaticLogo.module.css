@@ -32,3 +32,9 @@
     font-size: 1.3em;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .logo > * {
+    font-size: 1.1em;
+  }
+}
