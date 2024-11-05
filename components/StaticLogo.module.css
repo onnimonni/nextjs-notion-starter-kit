@@ -8,7 +8,6 @@
   max-height: 50px;
   max-width: 50px;
   object-fit: contain;
-  border-radius: 50%;
 }
 .logo > * {
   font-family: var(--logo-font);
@@ -25,5 +24,11 @@
 @media only screen and (max-width: 660px) {
   .logo {
     justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .logo > * {
+    font-size: 1.3em;
   }
 }
