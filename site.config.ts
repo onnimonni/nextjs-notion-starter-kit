@@ -24,7 +24,7 @@ export default siteConfig({
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   instagram: 'keksi_labs', // optional instagram username
-  // youtube: 'TravelingVanProblem', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
+  //youtube: '@KeksiTukiopetus', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
   // reddit: 'TravelingVanProblem', // optional reddit username
 
   // default notion icon and cover images for site-wide consistency (optional)
