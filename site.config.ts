@@ -40,39 +40,32 @@ export default siteConfig({
   // environment variables. see the readme for more info
   isRedisEnabled: false,
 
-  // map of notion page IDs to URL paths (optional)
-  // any pages defined here will override their default URL paths
-  // example:
-  //
-  // pageUrlOverrides: {
-  //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
-  //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
-  // }
-  pageUrlOverrides: null,
-
   // whether to use the default notion navigation style or a custom one with links to
   // important pages. To use `navigationLinks`, set `navigationStyle` to `custom`.
   navigationStyle: 'custom',
   navigationLinks: [
     {
-      title: 'Hinnat',
+      title: 'Hinnasto',
       pageId: '2b2738cdeb98488b99d8c50aed1eab40'
     },
     {
-      title: 'Varaa aika',
-      // Vaihda tähä oma linkki
-      url: 'https://cal.com/meri.jyrava'
-    },
-    {
-      title: 'Yhteystiedot',
+      title: 'Ota yhteyttä',
       pageId: 'aa0d2bdcfe714eb49c3c633d170edd24'
     }
   ],
 
+  // map of notion page IDs to URL paths (optional)
+  // any pages defined here will override their default URL paths
+  // example:
+  pageUrlOverrides: {
+    '/palvelun-ehdot': '1358512e8688809b8980df211624042e',
+    '/tietosuojaseloste': '1348512e8688804d9542e585c113dc1c'
+  },
+
   footerLinks: [
     {
       title: 'Palvelun ehdot',
-      url: '#'
+      pageId: '1358512e8688809b8980df211624042e'
     },
     {
       title: 'Tietosuojaseloste',
