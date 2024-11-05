@@ -22,7 +22,8 @@ export function PageHead({
   title = title ?? site?.name
   description = description ?? site?.description
 
-  const socialImageUrl = getSocialImageUrl(pageId) || image
+  // FIXME: Social sharing images seem to be broken
+  const socialImageUrl = `${config.host}/social-sharing-image.png`
 
   return (
     <Head>
