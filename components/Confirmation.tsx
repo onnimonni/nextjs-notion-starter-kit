@@ -1,10 +1,12 @@
-import type * as types from '@/lib/types'
 import cs from 'classnames'
+
+import type * as types from '@/lib/types'
+
 import { PageHead } from './PageHead'
 import styles from './styles.module.css'
 
-export function Confirmation({ site, pageId, error }: types.PageProps) {
-  const title = site?.name || 'Notion Page Not Found'
+export function Confirmation({ site }: types.PageProps) {
+  const title = 'Varausvahvistus'
 
   return (
     <>
