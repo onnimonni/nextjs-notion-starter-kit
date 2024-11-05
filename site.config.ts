@@ -12,6 +12,7 @@ export default siteConfig({
   name: 'Keksi Tukiopetus',
   domain: 'keksi.io',
   author: 'Meri Jyrävä',
+  language: 'fi', // override the default english language
 
   // open graph metadata (optional)
   description: "Tukiopetusta etänä erityisopetuksen asiantuntijalta",
