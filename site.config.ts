@@ -9,7 +9,7 @@ export default siteConfig({
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'Keksi Labs',
+  name: 'Keksi Tukiopetus',
   domain: 'keksi.io',
   author: 'Meri Jyrävä',
 
