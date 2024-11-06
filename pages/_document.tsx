@@ -72,6 +72,7 @@ export default class MyDocument extends Document {
                       {
                         "@context": "https://schema.org",
                         "@type": "LocalBusiness",
+                        "@id": "https://keksi.io/#localbusiness",
                         "address": {
                           "@type": "PostalAddress",
                           "addressLocality": "Tampere",
@@ -87,10 +88,11 @@ export default class MyDocument extends Document {
                       {
                         "@context": "https://schema.org/",
                         "@type": "Service",
+                        "@id": "https://keksi.io/#service",
                         "serviceType": "Yksityisopetus",
                         "provider": {
                           "@type": "LocalBusiness",
-                          "name": "Keksi Tukiopetus"
+                          "@id": "https://keksi.io/#localbusiness",
                         },
                         "areaServed": {
                           "@type": "Country",
