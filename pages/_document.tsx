@@ -78,7 +78,7 @@ export default class MyDocument extends Document {
                           "addressCountry": "FI",
                           "addressRegion": "Pirkanmaa"
                         },
-                        "url": "https://keksi.io/",
+                        "url": "https://keksi.io/",
                         "description": "Tukiopetusta etänä erityisopetuksen asiantuntijalta suomen kielellä Google Meet -alustalla",
                         "name": "Keksi Tukiopetus",
                         //"telephone": "+358"
