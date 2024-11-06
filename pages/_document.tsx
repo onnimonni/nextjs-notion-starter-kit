@@ -81,6 +81,7 @@ export default class MyDocument extends Document {
                         "url": "https://keksi.io/",
                         "description": "Tukiopetusta etänä erityisopetuksen asiantuntijalta suomen kielellä Google Meet -alustalla",
                         "name": "Keksi Tukiopetus",
+                        "priceRange": "50€"
                         //"telephone": "+358"
                       },
                       {
