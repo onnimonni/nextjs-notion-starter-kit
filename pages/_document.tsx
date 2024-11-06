@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
                         "about": { "@id": "https://keksi.io/#organization" },
                         "datePublished": "2023-12-16T21:29:41+00:00",
                         "dateModified": "2024-10-29T13:02:01+00:00",
-                        "description": "Tukiopetusta etänä erityisopetuksen asiantuntijalta - Keksi Labs Oy",
+                        "description": "Tukiopetusta etänä erityisopetuksen asiantuntijalta - Keksi Tukiopetus",
                         "inLanguage": "fi",
                         "potentialAction": [
                           { "@type": "ReadAction", "target": ["https://keksi.io/"] }
