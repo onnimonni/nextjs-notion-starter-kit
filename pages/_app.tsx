@@ -14,6 +14,7 @@ import 'styles/notion.css'
 import 'styles/prism-theme.css'
 
 import type { AppProps } from 'next/app'
+import { GoogleTagManager } from '@next/third-parties/google'
 import cs from 'classnames'
 import * as Fathom from 'fathom-client'
 // Override font for the site
@@ -24,15 +25,13 @@ import * as React from 'react'
 
 import { bootstrap } from '@/lib/bootstrap-client'
 import {
-  google_tag_manager_id,
   fathomConfig,
   fathomId,
+  google_tag_manager_id,
   isServer,
   posthogConfig,
   posthogId
 } from '@/lib/config'
-
-import { GoogleTagManager } from '@next/third-parties/google'
 
 if (!isServer) {
   bootstrap()

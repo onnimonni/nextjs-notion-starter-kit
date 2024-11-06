@@ -1,13 +1,12 @@
+import { sendGTMEvent } from '@next/third-parties/google'
 import cs from 'classnames'
+import { useEffect } from 'react'
 
 import type * as types from '@/lib/types'
+import { google_adwords_id, host } from '@/lib/config'
 
 import { PageHead } from './PageHead'
 import styles from './styles.module.css'
-
-import { sendGTMEvent } from '@next/third-parties/google'
-import { useEffect } from 'react'
-import { google_adwords_id, host } from '@/lib/config'
 
 export function Confirmation({ site }: types.PageProps) {
   const title = 'Varausvahvistus'
