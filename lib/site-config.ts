@@ -5,6 +5,7 @@ export interface SiteConfig {
   rootNotionSpaceId?: string
 
   name: string
+  legal_name?: string
   domain: string
   author: string
   description?: string

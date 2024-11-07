@@ -10,6 +10,7 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'Keksi Tukiopetus',
+  legal_name: 'Keksi Labs Oy',
   domain: 'keksi.io',
   author: 'Meri Jyrävä',
   language: 'fi', // override the default english language
