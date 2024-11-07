@@ -6,6 +6,7 @@ export interface SiteConfig {
 
   name: string
   legal_name?: string
+  company_identifier?: string
   domain: string
   author: string
   description?: string

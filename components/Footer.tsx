@@ -3,7 +3,7 @@ import * as React from 'react'
 import { IoMoonSharp, IoSunnyOutline } from 'react-icons/io5'
 import { useNotionContext } from 'react-notion-x'
 
-import { footerLinks, legal_name } from '@/lib/config'
+import { footerLinks, legal_name, company_identifier } from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
 import { PageSocialButtons } from './PageSocial'
@@ -85,7 +85,7 @@ export function FooterImpl() {
             })
             .filter(Boolean)}
           </div>
-          <div className={styles.copyright}>© Copyright {currentYear} {legal_name}. All rights reserved.</div>
+          <div className={styles.copyright}>© Copyright {currentYear} {[legal_name,company_identifier].filter(Boolean).join(' - ')}. All rights reserved.</div>
         </div>
     </footer>
   )
