@@ -100,41 +100,39 @@ export function PageHead({
       <meta name='twitter:title' content={title} />
       <title>{title}</title>
       { isBlogPost && (
-        <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BlogPosting",
-              "@id": url,
-              url,
-              "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": `https://${config.domain}`,
-                "url": `https://${config.domain}`,
-                "name": config.name,
-                "description": config.description,
-                "inLanguage": {
-                  "@type": "Language",
-                  // TODO: convert 2 char identifier 'en' to the language
-                  //"name": "English",
-                  "alternateName": config.language
-                }
-              },
-              "headline": title,
-              description,
-              "image": socialImageUrl,
-              "author": {
-                "@type": "Person",
-                "name": config.author,
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "@id": url,
+            url,
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": `https://${config.domain}#webpage`,
+              "url": `https://${config.domain}`,
+              "name": config.name,
+              "description": config.description,
+              "inLanguage": {
+                "@type": "Language",
+                "alternateName": config.language
               }
-              // TODO: Figure out how to pull these from the Notion content
-              //"datePublished": "2024-11-08",
-              //"dateModified": "2024-11-08",
-              //"articleBody": "..."
-          })
-        }}
-      />
+            },
+            "headline": title,
+            description,
+            "image": socialImageUrl,
+            "author": {
+              "@type": "Person",
+              // TODO: Google rich search results page is mentioning about this
+              // Maybe site config could contain author url?
+              // "url": ""
+              "name": config.author,
+            }
+            // TODO: Figure out how to pull these from the Notion content
+            //"datePublished": "2024-11-08",
+            //"dateModified": "2024-11-08",
+            //"articleBody": "..."
+          })}
+        </script>
       )}
     </Head>
   )

@@ -26,7 +26,7 @@ export default class MyDocument extends Document {
                     "@graph": [
                       {
                         "@type": "WebPage",
-                        "@id": "https://keksi.io/",
+                        "@id": "https://keksi.io/#webpage",
                         "url": "https://keksi.io/",
                         "name": "Tukiopetusta etänä erityisopetuksen asiantuntijalta",
                         "isPartOf": { "@id": "https://keksi.io/#website" },
