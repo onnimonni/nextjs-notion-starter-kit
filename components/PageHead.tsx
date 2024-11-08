@@ -7,12 +7,14 @@ export function PageHead({
   site,
   title,
   description,
-  url
+  url,
+  isBlogPost
 }: types.PageProps & {
   title?: string
   description?: string
   image?: string
   url?: string
+  isBlogPost?: boolean
 }) {
   const rssFeedUrl = `${config.host}/feed`
 
@@ -97,6 +99,43 @@ export function PageHead({
       <meta property='og:title' content={title} />
       <meta name='twitter:title' content={title} />
       <title>{title}</title>
+      { isBlogPost && (
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              "@id": url,
+              url,
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": `https://${config.domain}`,
+                "url": `https://${config.domain}`,
+                "name": config.name,
+                "description": config.description,
+                "inLanguage": {
+                  "@type": "Language",
+                  // TODO: convert 2 char identifier 'en' to the language
+                  //"name": "English",
+                  "alternateName": config.language
+                }
+              },
+              "headline": title,
+              description,
+              "image": socialImageUrl,
+              "author": {
+                "@type": "Person",
+                "name": config.author,
+              }
+              // TODO: Figure out how to pull these from the Notion content
+              //"datePublished": "2024-11-08",
+              //"dateModified": "2024-11-08",
+              //"articleBody": "..."
+          })
+        }}
+      />
+      )}
     </Head>
   )
 }
