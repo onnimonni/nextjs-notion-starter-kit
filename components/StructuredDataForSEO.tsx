@@ -1,5 +1,5 @@
-import * as config from '@/lib/config'
 import { socialLinks } from '@/components/PageSocial'
+import * as config from '@/lib/config'
 
 
 export function StructuredDataForSEO() {

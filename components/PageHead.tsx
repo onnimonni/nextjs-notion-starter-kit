@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import type * as types from '@/lib/types'
 import * as config from '@/lib/config'
+
 import { StructuredDataForSEO } from './StructuredDataForSEO'
 
 export function PageHead({
