@@ -11,6 +11,7 @@ export default siteConfig({
   // basic site info (required)
   name: 'Keksi Tukiopetus',
   legal_name: 'Keksi Labs Oy',
+  company_vat_id: 'FI27345244',
   company_identifier: '2734524-4',
   domain: 'keksi.io',
   author: 'Meri Jyrävä',
@@ -21,7 +22,11 @@ export default siteConfig({
   google_adwords_id: 'AW-16758350058',
 
   // open graph metadata (optional)
-  description: "Tukiopetusta etänä erityisopetuksen asiantuntijalta",
+  description: 'Tukiopetusta etänä erityisopetuksen asiantuntijalta',
+
+  // Contact information
+  telephone: '+358413630091',
+  email: 'meri@keksi.io',
 
   // social usernames (optional)
   //twitter: 'flakybuild',
@@ -30,6 +35,7 @@ export default siteConfig({
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   instagram: 'keksi_labs', // optional instagram username
+  google_business: 'https://maps.app.goo.gl/39qSFe2uqxNzoeNM9',
   //youtube: '@KeksiTukiopetus', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
   // reddit: 'TravelingVanProblem', // optional reddit username
 

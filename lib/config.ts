@@ -50,6 +50,7 @@ export const isDev = environment === 'development'
 export const name: string = getSiteConfig('name')
 export const legal_name: string = getSiteConfig('legal_name', null)
 export const company_identifier: string = getSiteConfig('company_identifier', null)
+export const company_vat_id: string = getSiteConfig('company_vat_id', null)
 export const author: string = getSiteConfig('author')
 export const domain: string = getSiteConfig('domain')
 export const description: string = getSiteConfig('description', 'Notion Blog')
@@ -58,6 +59,10 @@ export const language: string = getSiteConfig('language', 'en')
 // Google and Advertising
 export const google_tag_manager_id: string | null = getSiteConfig('google_tag_manager_id', null)
 export const google_adwords_id: string | null = getSiteConfig('google_adwords_id', null)
+
+// Contact information
+export const telephone: string | null = getSiteConfig('telephone', null)
+export const email: string | null = getSiteConfig('email', null)
 
 // social accounts
 export const twitter: string | null = getSiteConfig('twitter', null)
@@ -72,6 +77,7 @@ export const linkedin: string | null = getSiteConfig('linkedin', null)
 export const newsletter: string | null = getSiteConfig('newsletter', null)
 export const zhihu: string | null = getSiteConfig('zhihu', null)
 export const bugtracker: string | null = getSiteConfig('bugtracker', null)
+export const google_business: string | null = getSiteConfig('google_business', null)
 
 export const getMastodonHandle = (): string | null => {
   if (!mastodon) {

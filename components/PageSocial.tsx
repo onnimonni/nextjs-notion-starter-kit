@@ -3,6 +3,7 @@ import cs from 'classnames'
 import { FaGithub, FaInstagram, FaLinkedin, FaMastodon, FaReddit, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { FaEnvelopeOpenText,FaGitlab, FaXTwitter } from 'react-icons/fa6'
 import { IoIosBug } from 'react-icons/io'
+import { SiGooglemybusiness } from "react-icons/si";
 
 import * as config from '@/lib/config'
 import { getLinkedInURLFromInput } from '@/lib/social-helpers'
@@ -67,7 +68,7 @@ export const socialLinks: SocialLink[] = [
   config.linkedin && {
     name: 'linkedin',
     href: getLinkedInURLFromInput(config.linkedin),
-    title: `LinkedIn ${config.author}`,
+    title: `LinkedIn ${config.name}`,
     color: "#ffffff",
     background: "#0077b5",
     icon: FaLinkedin
@@ -76,7 +77,7 @@ export const socialLinks: SocialLink[] = [
   config.newsletter && {
     name: 'newsletter',
     href: `${config.newsletter}`,
-    title: `Newsletter ${config.author}`,
+    title: `Newsletter ${config.name}`,
     color: "#777",
     icon: FaEnvelopeOpenText
   },
@@ -113,6 +114,15 @@ export const socialLinks: SocialLink[] = [
     title: 'Bugtracker',
     color: "#e24329",
     icon: IoIosBug
+  },
+
+  config.google_business && {
+    name: 'google_business',
+    href: `${config.google_business}`,
+    title: `${config.name} Google Business`,
+    color: "#ffffff",
+    background: "#4D74D8",
+    icon: SiGooglemybusiness
   }
 ].filter(Boolean)
 

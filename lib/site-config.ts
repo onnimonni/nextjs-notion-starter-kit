@@ -6,6 +6,7 @@ export interface SiteConfig {
 
   name: string
   legal_name?: string
+  company_vat_id?: string
   company_identifier?: string
   domain: string
   author: string
@@ -14,6 +15,9 @@ export interface SiteConfig {
 
   google_tag_manager_id?: string
   google_adwords_id?: string
+
+  telephone?: string,
+  email?: string,
 
   twitter?: string
   twitterX?: string
@@ -27,6 +31,7 @@ export interface SiteConfig {
   zhihu?: string
   mastodon?: string
   bugtracker?: string
+  google_business?: string
 
   defaultPageIcon?: string | null
   defaultPageCover?: string | null

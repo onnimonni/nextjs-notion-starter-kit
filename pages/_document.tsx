@@ -1,5 +1,7 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { IconContext } from 'react-icons'
+import * as config from '@/lib/config'
+import { socialLinks } from '@/components/PageSocial'
 
 export default class MyDocument extends Document {
   render() {
@@ -18,81 +20,85 @@ export default class MyDocument extends Document {
 
             {/* Try to get better Google visibility by adding the machine readable version here */}
             {(
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
+              <script type="application/ld+json">
+                {JSON.stringify({
                     "@context": "https://schema.org",
                     "@graph": [
                       {
                         "@type": "WebPage",
-                        "@id": "https://keksi.io/#webpage",
-                        "url": "https://keksi.io/",
-                        "name": "Tukiopetusta etänä erityisopetuksen asiantuntijalta",
-                        "isPartOf": { "@id": "https://keksi.io/#website" },
-                        "about": { "@id": "https://keksi.io/#organization" },
+                        "@id": `${config.host}/#webpage`,
+                        "url": `${config.host}/`,
+                        "name": config.name,
+                        "isPartOf": { "@id": `${config.host}/#website` },
+                        "about": { "@id": `${config.host}/#organization` },
                         "datePublished": "2023-12-16T21:29:41+00:00",
-                        "dateModified": "2024-10-29T13:02:01+00:00",
-                        "description": "Tukiopetusta etänä erityisopetuksen asiantuntijalta - Keksi Tukiopetus",
-                        "inLanguage": "fi",
+                        "dateModified": "2024-11-10T13:02:01+00:00",
+                        "description": config.description,
+                        "inLanguage": {
+                          "@type": "Language",
+                          "alternateName": config.language
+                        },
                         "potentialAction": [
-                          { "@type": "ReadAction", "target": ["https://keksi.io/"] }
+                          { "@type": "ReadAction", "target": [`${config.host}/`] }
                         ]
                       },
                       {
                         "@type": "WebSite",
-                        "@id": "https://keksi.io/#website",
-                        "url": "https://keksi.io/",
-                        "name": "Keksi Tukiopetus",
-                        "description": "Tukiopetusta etänä erityisopetuksen asiantuntijalta",
-                        "publisher": { "@id": "https://keksi.io/#organization" },
-                        "inLanguage": "fi"
+                        "@id": `${config.host}/#website`,
+                        "url": `${config.host}/`,
+                        "name": config.name,
+                        "description": config.description,
+                        "publisher": { "@id": `${config.host}/#organization` },
+                        "inLanguage": {
+                          "@type": "Language",
+                          "alternateName": config.language
+                        }
                       },
                       {
                         "@type": "Organization",
-                        "@id": "https://keksi.io/#organization",
-                        "name": "Keksi Labs Oy",
-                        "url": "https://keksi.io/",
-                        "logo": "https://keksi.io/favicon.svg",
-                        "email": "meri@keksi.io",
-                        //"telephone": "+47-99-999-9999",
+                        "@id": `${config.host}/#organization`,
+                        "name": config.legal_name,
+                        "url": `${config.host}/`,
+                        "logo": `${config.host}/favicon.svg`,
+                        "email": config.email,
+                        "telephone": config.telephone,
                         "address": {
                           "@type": "PostalAddress",
-                          "addressLocality": "Tampere",
+                          "addressLocality": "Jyväskylä",
                           "addressCountry": "FI",
-                          "addressRegion": "Pirkanmaa"
+                          "addressRegion": "Keski-Suomi",
+                          "postalCode": "40100",
+                          "streetAddress": "Kauppakatu 25"
                         },
-                        "vatID": "FI27345244",
-                        "sameAs": [
-                          "https://www.instagram.com/keksi_labs",
-                          "https://www.linkedin.com/company/keksilabs",
-                          "https://www.youtube.com/@KeksiTukiopetus"
-                        ]
+                        "vatID": config.company_vat_id,
+                        "sameAs": socialLinks.map(link => link.href),
                       },
                       {
-                        "@context": "https://schema.org",
+                        "@context": "https://schema.org/",
                         "@type": "LocalBusiness",
-                        "@id": "https://keksi.io/#localbusiness",
+                        "@id": `${config.host}/#localbusiness`,
                         "address": {
                           "@type": "PostalAddress",
-                          "addressLocality": "Tampere",
+                          "addressLocality": "Jyväskylä",
                           "addressCountry": "FI",
-                          "addressRegion": "Pirkanmaa"
+                          "addressRegion": "Keski-Suomi",
+                          "postalCode": "40100",
+                          "streetAddress": "Kauppakatu 25"
                         },
-                        "url": "https://keksi.io/",
-                        "description": "Tukiopetusta etänä erityisopetuksen asiantuntijalta suomen kielellä Google Meet -alustalla",
-                        "name": "Keksi Tukiopetus",
-                        "priceRange": "50€"
-                        //"telephone": "+358"
+                        "url": `${config.host}/`,
+                        "description": config.description,
+                        "name": config.name,
+                        "priceRange": "35-50€",
+                        "telephone": config.telephone
                       },
                       {
                         "@context": "https://schema.org/",
                         "@type": "Service",
-                        "@id": "https://keksi.io/#service",
-                        "serviceType": "Yksityisopetus",
+                        "@id": `${config.host}/#service`,
+                        "serviceType": "Private Tutor",
                         "provider": {
                           "@type": "LocalBusiness",
-                          "@id": "https://keksi.io/#localbusiness",
+                          "@id": `${config.host}/#localbusiness`,
                         },
                         "areaServed": {
                           "@type": "Country",
@@ -140,9 +146,9 @@ export default class MyDocument extends Document {
                       },
                       {
                           "@type": "Product",
-                          "@id": "https://keksi.io/#product",
+                          "@id": `${config.host}/#product`,
                           "name": "Tukiopetusta etänä",
-                          "image": "https://keksi.io/favicon.svg",
+                          "image": `${config.host}/favicon.svg`,
                           "description": "Tukiopetusta etänä erityisopetuksen asiantuntijalta suomen kielellä Google Meet -alustalla",
                           "keywords": "Tukiopetus, Erityisopettaja, Etäopetus, Suomi, Peruskoulu, Yläaste, Matematiikka, Äidinkieli",
                           "sku": "keksi-labs-tukiopetus",
@@ -152,20 +158,20 @@ export default class MyDocument extends Document {
                           },
                           "offers": {
                               "@type": "Offer",
-                              "url": "https://keksi.io/ajanvaraus",
+                              "url": `${config.host}/ajanvaraus`,
                               "priceCurrency": "EUR",
                               "price": "50",
                               "availability": "https://schema.org/InStock",
                               "seller": {
                                   "@type": "Organization",
-                                  "@id": "https://keksi.io/#organization"
+                                  "@id": `${config.host}/#organization`
                               }
                           },
                           "review": [{
                             "@type": "Review",
                             "datePublished": "2024-09-02",
                             "name": "Ei tarvinnut jäädä yksin läksyjen kanssa",
-                            "reviewBody": "Motivaatio oli nuorella vähän hakusessa ja yhdessä Merin kanssa hän löysi ihan uuden vaihteen koulutöiden tekemiseen ja ovet mieluisaan lukioon aukesivat. ",
+                            "reviewBody": "Motivaatio oli nuorella vähän hakusessa ja yhdessä Merin kanssa hän löysi ihan uuden vaihteen koulutöiden tekemiseen ja ovet mieluisaan lukioon aukesivat.",
                             "reviewRating": {
                               "@type": "Rating",
                               "ratingValue": 5
@@ -179,14 +185,14 @@ export default class MyDocument extends Document {
                               "@type": "AggregateRating",
                               "bestRating": 5,
                               "worstRating": 1,
-                              "ratingCount": 3,
+                              "ratingCount": 4,
                               "ratingValue": 5
                           }
                       }
                     ]
-                  }),
-                }}
-              />
+                  })
+                }
+              </script>
             )}
           </Head>
 
