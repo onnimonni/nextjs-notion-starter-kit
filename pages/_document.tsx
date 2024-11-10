@@ -1,7 +1,8 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { IconContext } from 'react-icons'
-import * as config from '@/lib/config'
+
 import { socialLinks } from '@/components/PageSocial'
+import * as config from '@/lib/config'
 
 export default class MyDocument extends Document {
   render() {
