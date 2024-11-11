@@ -108,7 +108,7 @@ const JSON_LD_STRUCTURED_DATA = {
                 "itemOffered": {
                   "@type": "Service",
                   "name": "1h yksityisopetus",
-                  "price": "50",
+                  "price": "35",
                   "priceCurrency": "EUR"
                 }
               },
@@ -117,7 +117,7 @@ const JSON_LD_STRUCTURED_DATA = {
                 "itemOffered": {
                   "@type": "Service",
                   "name": "1h tukiopetus",
-                  "price": "50",
+                  "price": "35",
                   "priceCurrency": "EUR"
                 }
               },
@@ -126,7 +126,7 @@ const JSON_LD_STRUCTURED_DATA = {
                 "itemOffered": {
                   "@type": "Service",
                   "name": "1h oppimisen tuki",
-                  "price": "50",
+                  "price": "35",
                   "priceCurrency": "EUR"
                 }
               }
@@ -150,8 +150,9 @@ const JSON_LD_STRUCTURED_DATA = {
         "offers": {
             "@type": "Offer",
             "url": `${config.host}/ajanvaraus`,
+            "priceValidUntil": "2024-12-31T22:00",
             "priceCurrency": "EUR",
-            "price": "50",
+            "price": "35",
             "availability": "https://schema.org/InStock",
             "seller": {
                 "@type": "Organization",
