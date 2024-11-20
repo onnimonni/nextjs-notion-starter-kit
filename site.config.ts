@@ -34,7 +34,7 @@ export default siteConfig({
   linkedin: 'company/keksilabs',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
-  instagram: 'keksi_labs', // optional instagram username
+  instagram: 'keksi_tukiopetus', // optional instagram username
   google_business: 'https://maps.app.goo.gl/39qSFe2uqxNzoeNM9',
   //youtube: '@KeksiTukiopetus', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
   // reddit: 'TravelingVanProblem', // optional reddit username
